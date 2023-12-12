@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-magenta: hsl(300, 69%, 71%);
+  --Violet: hsl(257, 40%, 49%);
+}
+
+body {
+  background: url(/images/bg-mobile.svg) var(--Violet);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header {
+  display: block;
+  padding: 2rem 3rem;
+  width: 100%;
+}
+.logo {
+  width: 10rem;
+}
+
+.main {
+  width: 80%;
+  align-self: center;
+  color: #fff;
+  text-align: center;
+}
+.main img {
+  width: 100%;
+}
+
+.writeup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 5rem;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+p {
+  font-size: 16px;
+}
+.cta {
+  width: 60%;
+  padding: 1rem;
+  align-self: center;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  box-shadow: 1px 3px 5px #00000091;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 4rem 0 2rem; */
+  padding: 2rem;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.socials img {
+  width: 2rem;
+  height: 2rem;
+  padding: 3px;
+  border-radius: 50px;
+  outline: solid 1px #fff;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 1200px) {
+  body {
+    background: url(images/bg-desktop.svg) var(--Violet);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .main img {
+    width: 50%;
+  }
+
+  .writeup {
+    margin-top: 0;
+    text-align: left;
+    flex-direction: column;
+    position: relative;
+    width: 34%;
+  }
+  h2 {
+    width: 60%;
+  }
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    position: absolute;
+    top: 35rem;
+    right: 26.7rem;
+  }
+
+  footer {
+    align-items: last baseline;
+  }
+}
